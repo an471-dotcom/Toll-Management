@@ -137,7 +137,7 @@ import React from 'react';
             className="form-container">
 
             <h3 className="headline">Add New Toll</h3>
-            <label for="toll"><b>Toll Name <span className="red">*</span></b></label>
+            <label htmlFor="toll"><b>Toll Name <span className="red">*</span></b></label>
             <div className='tollerror'>{this.state.error}</div>
             <input 
                     type="text"
@@ -149,7 +149,7 @@ import React from 'react';
                     required/>
         
         <div className="vehicle"> 
-            <label for="vehicle"><b>Vehicle fare details <span className="red">*</span></b></label> </div>
+            <label htmlFor="vehicle"><b>Vehicle fare details <span className="red">*</span></b></label> </div>
         <div className="vehicleFare">
             <select name="0"  id="vehicle1" defaultValue={"0"} onChange={this.selectedValue}  value={this.state.formdata.fare[0].vehicleType} className="fareData"required>
                 <option value="0"disabled  hidden>Select vehicle type</option>
@@ -172,10 +172,10 @@ import React from 'react';
             <select name="1"  id="vehicle2"defaultValue={"0"} onChange={this.selectedValue}  value={this.state.formdata.fare[1].vehicleType}className="fareData"required>
                 <option value="0" disabled  hidden>Select vehicle type</option>
                 {
-                    this.optionsArr.map((option)=>{
+                    this.optionsArr.map((option,i)=>{
                         
                         return(
-                            <option value={option}>{option}</option>
+                            <option key={i} value={option}>{option}</option>
                         )            
                         
                                                                                 
@@ -189,10 +189,10 @@ import React from 'react';
             <select name="2"  id="vehicle3" defaultValue={"0"} onChange={this.selectedValue}  value={this.state.formdata.fare[2].vehicleType} className="fareData" required>
                     <option value="0" disabled  hidden>Select vehicle type</option>
                     {
-                        this.optionsArr.map((option)=>{
+                        this.optionsArr.map((option,i)=>{
                             
                             return(
-                                <option value={option}>{option}</option>
+                                <option key={i} value={option}>{option}</option>
                             )            
                                                                                 
                         })
@@ -205,10 +205,10 @@ import React from 'react';
             <select name="3"  id="vehicle4" defaultValue={"0"} onChange={this.selectedValue}  value={this.state.formdata.fare[3].vehicleType} className="fareData"required>
                     <option value="0" disabled hidden>Select vehicle type</option>
                     {
-                        this.optionsArr.map((option)=>{
+                        this.optionsArr.map((option,i)=>{
                         
                             return(
-                                <option value={option}>{option}</option>
+                                <option key={i} value={option}>{option}</option>
                             )            
                                                                                 
                         })
@@ -217,8 +217,8 @@ import React from 'react';
             <input className="fareData" type="number" placeholder="Single Journey" value={this.state.formdata.fare[3].singleJourney} onChange={this.SinglejourneyHandler} name="3" required/>
             <input className="fareData" type="number" placeholder="Return Journey" value={this.state.formdata.fare[3].returnJourney}onChange={this.ReturnjourneyHandler} name="3" required/>
         </div>
-    <button type="submit" class="btn">Add Details</button>
-    <button type="button" class="cancel" onClick={this.hidePopup}>X</button>
+    <button type="submit" className="btn">Add Details</button>
+    <button type="button" className="cancel" onClick={this.hidePopup}>X</button>
     
         </form>
         </div>

@@ -4,16 +4,16 @@ import alert from '../images/alert1.PNG'
 import alert1 from '../images/alert.png'
 import "../styles/MessageBox.css"
 const MessageBox = forwardRef((props,ref)=>{
-  const {show} = props
+  const {show,close,setErrorMessage} = props
   
   useEffect(() => {
       const timer = setTimeout(() => {
         
-        props.close()
-      props.setErrorMessage("","")
+        close()
+      setErrorMessage("","")
       }, 2000);
       return () => clearTimeout(timer);
-    }, [show]);
+    }, [show,close,setErrorMessage]);
     
   
     if(!show)

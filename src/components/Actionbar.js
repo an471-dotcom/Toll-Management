@@ -1,4 +1,4 @@
-import {  useEffect, useState } from 'react';
+import {   useState } from 'react';
 import filter from '../images/filter.svg'
 import search from '../images/search.svg'
 import check from '../images/check.png'
@@ -52,7 +52,7 @@ const Actionbar = (props)=>{
     return (
         <>
         <div className="action">
-        <div class="flex">
+        <div className="flex">
             <h4>{props.toggle?'Tollgate List':'Toll entries/Vechicle entries'}</h4>
             <span className="pipe">|</span>
             <div className={props.toggle?"hide-filter":"filter"}>

@@ -37,7 +37,7 @@ const AddVehicle =forwardRef((props,ref)=>{
             return
         }
         setTariff("")
-    },[tollname,vehicleType,vehicleNumber,tolls,vechicleNumberValidate,entries])
+    },[tollname,vehicleType,vehicleNumber,tolls,vechicleNumberValidate,entries,time])
     
     useImperativeHandle(ref, () => ({
 
