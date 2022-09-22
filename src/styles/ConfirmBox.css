@@ -1,0 +1,54 @@
+.confirmbox-backdrop{
+    
+    
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+  
+}
+
+
+.confirm-box{
+
+
+    
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding: 20px;
+}
+.buttons{
+    margin-left: auto;
+}
+.cancel-btn{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 15px;
+   color:rgb(25, 118, 210);
+   padding:8px 12px;
+   border-radius: 0.25rem;
+
+}
+.cancel-btn:hover{
+    background-color: rgba(25, 118, 210, 0.04);
+    
+}
+.ok-btn{
+    background-color: rgb(25, 118, 210);
+    outline: none;
+    border: none;
+    font-size: 15px;
+   color:white;
+   padding:8px 12px;
+   border-radius: 0.25rem;
+   margin-left: 5px;
+}

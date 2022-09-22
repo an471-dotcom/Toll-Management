@@ -1,0 +1,26 @@
+.error-Box{
+    position: absolute;
+    bottom:0;
+    left:50%;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+    transition: visiblity 0.5s, bottom 0.2s,opacity 0.2s;
+    height: 50px;
+    width: 300px;
+    background-color: rgb(54 125 246,0.5);
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    visibility: hidden;
+    color:white;
+    text-align: center;
+    display: flex;
+    gap:10px;
+    padding-left:10px;
+    align-items: center;
+    border-radius: 0.25rem;
+}
+
+.errorBoxshow{
+    visibility:visible;
+    bottom:10px;
+    opacity: 1;
+}
